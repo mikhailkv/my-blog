@@ -1,0 +1,57 @@
+{% load static %}
+<html>
+<head>
+    <title>posts by posts</title>
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+   <div class="page-header">
+       <div class="page-header-menu">
+
+           <h1><a href="/"><div id="main">
+        <div class="one">Posts</div>
+        <div class="two">by</div>
+        <div class="three">posts</div>
+
+    </div></a></h1>
+       <header class="">
+            {% if user.is_authenticated %}
+              You are signed in as <strong>{{ user.username }}</strong> /
+              <img class="img-circle" src="https://graph.facebook.com/{{ userid.extra_data.id }}/picture">
+              <a href="{% url 'home' %}">home</a> /
+              <a href="{% url 'settings' %}">settings</a> /
+              <a href="{% url 'password' %}">change password</a> /
+              <a href="{% url 'logout' %}">logout</a>
+            {% else %}
+              <a href="{% url 'login' %}">login</a> /
+              <a href="{% url 'signup' %}">signup</a>
+            {% endif %}
+            <hr>
+       </header>
+       </div>
+   </div>
+       <main class="main">
+            {% block content %}
+            {% endblock %}
+            {% for post in posts %}
+            <div class="post">
+
+            <div class="date">
+            {{ post.published_date }}
+            </div>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+            {% endfor %}
+       </main>
+       <footer>
+            <hr>
+            <small>
+
+            </small>
+       </footer>
+
+</body>
+</html>

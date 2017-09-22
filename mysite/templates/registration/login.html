@@ -1,0 +1,17 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+  <div class="main1">
+  <h2>Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+  <br>
+  <p><strong>-- OR --</strong></p>
+  <a href="{% url 'social:begin' 'facebook' %}"><img src="{% static 'img/facebook.png' %}"></a>
+  </div>
+{% endblock %}

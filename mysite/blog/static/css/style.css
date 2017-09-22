@@ -1,0 +1,60 @@
+    .page-header h1 a {
+        color: #FCA205;
+        font-family: 'Abril Fatface', cursive;
+    }
+
+     .page-header {
+
+    }
+
+    .page-header-menu {
+        max-width: 800px;
+        align: center;
+        margin: auto;
+
+
+    }
+    .main {
+        max-width: 800px;
+        align: center;
+        margin: auto;
+
+
+    }
+
+      .main1 {
+        max-width: 800px;
+        align: center;
+        margin: auto;
+
+
+    }
+
+    a {
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+    }
+
+    .page-header {
+        color: #FCA205;
+        font-family: 'Abril Fatface', cursive;
+        background-color: #EBEBEB;
+    }
+
+    .img-circle {
+    border-radius: 50%;
+    align: center;
+    }
+
+    #main{
+        width: auto;
+        height: auto;
+        overflow: hidden;
+    }
+    #main>div{
+        width: auto;
+        height: auto;
+        display: inline-block;
+
+    .one {
+        color: #FFF;
+    }
